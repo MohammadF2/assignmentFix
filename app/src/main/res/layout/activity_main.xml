@@ -19,6 +19,7 @@
             android:id="@+id/greetingText"
             style="@style/Main"
             android:layout_width="wrap_content"
+            android:fontFamily="serif"
             android:paddingStart="20dp"
             android:paddingTop="20dp"
             android:text="@string/Test_Greeting"
@@ -39,6 +40,7 @@
             android:layout_width="300dp"
             android:layout_height="118dp"
             android:contentDescription="@string/firstimagediscription"
+            android:onClick="taskClick"
             android:src="@drawable/homework_1" />
 
         <ImageView
@@ -51,13 +53,16 @@
             android:src="@drawable/first" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="213dp"
             android:layout_height="match_parent"
+            android:fontFamily="serif"
+            android:onClick="taskClick"
             android:paddingStart="13dp"
             android:paddingTop="50dp"
             android:text="@string/click_on_the_icon"
             android:textColor="@color/black"
-            android:textSize="13sp" />
+            android:textSize="16dp"
+            android:translationX="100dp" />
     </FrameLayout>
 
     <FrameLayout
@@ -69,6 +74,7 @@
             style="@style/Main"
             android:layout_width="300dp"
             android:layout_height="118dp"
+            android:onClick="examClick"
             android:contentDescription="@string/firstimagediscription"
             android:src="@drawable/quiz_1" />
 
@@ -84,11 +90,15 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="serif"
+            android:onClick="examClick"
             android:paddingStart="13dp"
             android:paddingTop="50dp"
             android:text="@string/click_on_the_icon2"
             android:textColor="@color/black"
-            android:textSize="13sp" />
+            android:textSize="16dp"
+            android:translationX="60dp" />
 
     </FrameLayout>
 
@@ -101,6 +111,7 @@
             style="@style/Main"
             android:layout_width="300dp"
             android:layout_height="118dp"
+            android:onClick="gradesClick"
             android:contentDescription="@string/firstimagediscription"
             android:src="@drawable/calender_1" />
 
@@ -116,11 +127,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="serif"
+            android:onClick="gradesClick"
             android:paddingStart="13dp"
             android:paddingTop="50dp"
             android:text="@string/click_on_the_icon3"
             android:textColor="@color/black"
-            android:textSize="13sp" />
+            android:textSize="16dp"
+            android:translationX="100dp" />
     </FrameLayout>
 
     <TextView
@@ -128,5 +142,22 @@
         android:layout_height="match_parent"
         android:text="@string/line"
         android:textColor="@color/black" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="serif"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/Bottom_message"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+
+        </FrameLayout>
 
 </LinearLayout>

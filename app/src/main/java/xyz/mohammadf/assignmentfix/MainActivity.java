@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     public void billClick(View view) {
 
         AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
-        builder1.setMessage("Will added next update.");
+        builder1.setMessage("Will be added next update.");
         builder1.setCancelable(true);
 
         builder1.setPositiveButton(
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     public void taskClick(View view) {
 
         AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
-        builder1.setMessage("Will added next update.");
+        builder1.setMessage("Will be added next update.");
         builder1.setCancelable(true);
 
         builder1.setPositiveButton(
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
     public void examClick(View view) {
 
         AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
-        builder1.setMessage("Will added next update.");
+        builder1.setMessage("Will be added next update.");
         builder1.setCancelable(true);
 
         builder1.setPositiveButton(
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
     public void gradesClick(View view) {
 
         AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
-        builder1.setMessage("Will added next update.");
+        builder1.setMessage("Will be added next update.");
         builder1.setCancelable(true);
 
         builder1.setPositiveButton(
