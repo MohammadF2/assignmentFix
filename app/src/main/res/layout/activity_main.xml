@@ -3,77 +3,130 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_height="wrap_content"
     android:layout_gravity="center"
+    android:background="@drawable/newback_1"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-    <TextView
-        android:text="@string/Test_Greeting"
-        android:id="@+id/greetingText"
-        android:paddingStart="20dp"
-        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/greetingText"
+            style="@style/Main"
+            android:layout_width="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp"
+            android:text="@string/Test_Greeting"
+            android:textColor="@color/black"
+            tools:ignore="RtlSymmetry" />
+
+
+    </LinearLayout>
+
+
+    <FrameLayout
         style="@style/Main"
-        tools:ignore="RtlSymmetry" />
+        android:layout_width="300dp"
+        android:layout_height="118dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-    </LinearLayout>
-    <ScrollView
+            style="@style/Main"
+            android:layout_width="300dp"
+            android:layout_height="118dp"
+            android:contentDescription="@string/firstimagediscription"
+            android:src="@drawable/homework_1" />
 
-        android:id="@+id/scroll"
-        style="@style/MainActivity"
-        android:layout_width="400dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="25dp"
-        android:fillViewport="true"
-        android:padding="10dp"
-        android:scrollbars="horizontal"
-        android:translationY="-50dp">
+        <ImageView
+            style="@style/Main"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="104dp"
+            android:contentDescription="@string/firstimagediscription"
+            android:onClick="taskClick"
+            android:src="@drawable/first" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="13dp"
+            android:paddingTop="50dp"
+            android:text="@string/click_on_the_icon"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+    </FrameLayout>
 
-            >
+    <FrameLayout
+        style="@style/Main"
+        android:layout_width="300dp"
+        android:layout_height="118dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+        <ImageView
+            style="@style/Main"
+            android:layout_width="300dp"
+            android:layout_height="118dp"
+            android:contentDescription="@string/firstimagediscription"
+            android:src="@drawable/quiz_1" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/firstimagediscription"
+        <ImageView
+            style="@style/Main"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="104dp"
+            android:contentDescription="@string/firstimagediscription"
+            android:onClick="examClick"
+            android:src="@drawable/chat" />
 
-                    android:src="@drawable/homework_1" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="13dp"
+            android:paddingTop="50dp"
+            android:text="@string/click_on_the_icon2"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/firstimagediscription"
+    </FrameLayout>
 
-                    android:src="@drawable/quiz_1" />
+    <FrameLayout
+        style="@style/Main"
+        android:layout_width="300dp"
+        android:layout_height="118dp">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/firstimagediscription"
+        <ImageView
+            style="@style/Main"
+            android:layout_width="300dp"
+            android:layout_height="118dp"
+            android:contentDescription="@string/firstimagediscription"
+            android:src="@drawable/calender_1" />
 
-                    android:src="@drawable/calender_1" />
+        <ImageView
+            style="@style/Main"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="104dp"
+            android:contentDescription="@string/firstimagediscription"
+            android:onClick="gradesClick"
+            android:src="@drawable/last" />
 
-            </LinearLayout>
-        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="13dp"
+            android:paddingTop="50dp"
+            android:text="@string/click_on_the_icon3"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+    </FrameLayout>
 
-
-    </ScrollView>
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/line"
+        android:textColor="@color/black" />
 
 </LinearLayout>

@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Assignment</string>
-    <string name="Test_Greeting">Good evening, Mohammad Faraj ☀️</string>
+    <string name="Test_Greeting">Good morning, Mohammad Faraj ☀️</string>
     <string name="firstimagediscription">FirstImageDiscription</string>
+    <string name="click_on_the_icon">Click on the icon to see the Tasks</string>
+    <string name="click_on_the_icon2">Click on the icon to see the Exams</string>
+    <string name="click_on_the_icon3">Click on the icon to see the Grades</string>
+    <string name="line">____________________________________________________________</string>
 </resources>
