@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:onClick="taskClick"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home"
+        />
+
+
+    <item
+        android:onClick="taskClick"
+        android:icon="@drawable/baseline_manage_accounts_24"
+        android:title="Account"
+        />
+
+    <item
+        android:onClick="taskClick"
+        android:icon="@drawable/baseline_message_24"
+        android:title="Message"
+        />
+
+    <item
+        android:onClick="taskClick"
+        android:icon="@drawable/baseline_report_problem_24"
+        android:title="Report"
+        />
+
+</menu>

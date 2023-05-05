@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:background="@drawable/newback_1"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -13,143 +15,160 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/greetingText"
+                style="@style/Main"
+                android:layout_width="wrap_content"
+                android:fontFamily="serif"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:text="@string/Test_Greeting"
+                android:textColor="@color/black"
+                tools:ignore="RtlSymmetry" />
+
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            style="@style/Main"
+            android:layout_width="300dp"
+            android:layout_height="118dp">
+
+            <ImageView
+                style="@style/Main"
+                android:layout_width="300dp"
+                android:layout_height="118dp"
+                android:contentDescription="@string/firstimagediscription"
+                android:onClick="taskClick"
+                android:src="@drawable/homework_1" />
+
+            <ImageView
+                style="@style/Main"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="104dp"
+                android:contentDescription="@string/firstimagediscription"
+                android:onClick="taskClick"
+                android:src="@drawable/first" />
+
+            <TextView
+                android:layout_width="213dp"
+                android:layout_height="match_parent"
+                android:fontFamily="serif"
+                android:onClick="taskClick"
+                android:paddingStart="13dp"
+                android:paddingTop="50dp"
+                android:text="@string/click_on_the_icon"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:translationX="100dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            style="@style/Main"
+            android:layout_width="300dp"
+            android:layout_height="118dp">
+
+            <ImageView
+                style="@style/Main"
+                android:layout_width="300dp"
+                android:layout_height="118dp"
+                android:contentDescription="@string/firstimagediscription"
+                android:onClick="examClick"
+                android:src="@drawable/quiz_1" />
+
+            <ImageView
+                style="@style/Main"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="104dp"
+                android:contentDescription="@string/firstimagediscription"
+                android:onClick="examClick"
+                android:src="@drawable/chat" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="serif"
+                android:onClick="examClick"
+                android:paddingStart="13dp"
+                android:paddingTop="50dp"
+                android:text="@string/click_on_the_icon2"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:translationX="60dp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            style="@style/Main"
+            android:layout_width="300dp"
+            android:layout_height="118dp">
+
+            <ImageView
+                style="@style/Main"
+                android:layout_width="300dp"
+                android:layout_height="118dp"
+                android:contentDescription="@string/firstimagediscription"
+                android:onClick="gradesClick"
+                android:src="@drawable/calender_1" />
+
+            <ImageView
+                style="@style/Main"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="104dp"
+                android:contentDescription="@string/firstimagediscription"
+                android:onClick="gradesClick"
+                android:src="@drawable/last" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="serif"
+                android:onClick="gradesClick"
+                android:paddingStart="13dp"
+                android:paddingTop="50dp"
+                android:text="@string/click_on_the_icon3"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:translationX="100dp" />
+        </FrameLayout>
 
         <TextView
-            android:id="@+id/greetingText"
-            style="@style/Main"
-            android:layout_width="wrap_content"
-            android:fontFamily="serif"
-            android:paddingStart="20dp"
-            android:paddingTop="20dp"
-            android:text="@string/Test_Greeting"
-            android:textColor="@color/black"
-            tools:ignore="RtlSymmetry" />
-
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/line"
+            android:textColor="@color/black" />
 
     </LinearLayout>
 
-
-    <FrameLayout
-        style="@style/Main"
-        android:layout_width="300dp"
-        android:layout_height="118dp">
-
-        <ImageView
-            style="@style/Main"
-            android:layout_width="300dp"
-            android:layout_height="118dp"
-            android:contentDescription="@string/firstimagediscription"
-            android:onClick="taskClick"
-            android:src="@drawable/homework_1" />
-
-        <ImageView
-            style="@style/Main"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="104dp"
-            android:contentDescription="@string/firstimagediscription"
-            android:onClick="taskClick"
-            android:src="@drawable/first" />
-
-        <TextView
-            android:layout_width="213dp"
-            android:layout_height="match_parent"
-            android:fontFamily="serif"
-            android:onClick="taskClick"
-            android:paddingStart="13dp"
-            android:paddingTop="50dp"
-            android:text="@string/click_on_the_icon"
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            android:translationX="100dp" />
-    </FrameLayout>
-
-    <FrameLayout
-        style="@style/Main"
-        android:layout_width="300dp"
-        android:layout_height="118dp">
-
-        <ImageView
-            style="@style/Main"
-            android:layout_width="300dp"
-            android:layout_height="118dp"
-            android:onClick="examClick"
-            android:contentDescription="@string/firstimagediscription"
-            android:src="@drawable/quiz_1" />
-
-        <ImageView
-            style="@style/Main"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="104dp"
-            android:contentDescription="@string/firstimagediscription"
-            android:onClick="examClick"
-            android:src="@drawable/chat" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/menuBar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="88dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:fontFamily="serif"
-            android:onClick="examClick"
-            android:paddingStart="13dp"
-            android:paddingTop="50dp"
-            android:text="@string/click_on_the_icon2"
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            android:translationX="60dp" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        style="@style/Main"
-        android:layout_width="300dp"
-        android:layout_height="118dp">
-
-        <ImageView
-            style="@style/Main"
-            android:layout_width="300dp"
-            android:layout_height="118dp"
-            android:onClick="gradesClick"
-            android:contentDescription="@string/firstimagediscription"
-            android:src="@drawable/calender_1" />
-
-        <ImageView
-            style="@style/Main"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="104dp"
-            android:contentDescription="@string/firstimagediscription"
-            android:onClick="gradesClick"
-            android:src="@drawable/last" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fontFamily="serif"
-            android:onClick="gradesClick"
-            android:paddingStart="13dp"
-            android:paddingTop="50dp"
-            android:text="@string/click_on_the_icon3"
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            android:translationX="100dp" />
-    </FrameLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/line"
-        android:textColor="@color/black" />
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:fontFamily="serif"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
@@ -158,6 +177,16 @@
             android:textSize="15dp" />
 
 
-        </FrameLayout>
+    </LinearLayout>
 
-</LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/menuBar"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/nav_menu"
+
+        />
+
+</RelativeLayout>
