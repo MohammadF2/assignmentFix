@@ -19,7 +19,22 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+
+        <activity
+            android:name=".activitys.TestActivity"
+            android:label="Test Activity" />
+        <activity
+            android:name=".activitys.AccountActivity"
+            android:label="Account Activity" />
+        <activity
+            android:name=".activitys.EngTaskActivity"
+            android:label="EngTask Activity" />
+        <activity
+            android:name=".activitys.UpcomingActivity"
+            android:label="Upcoming Activity" />
+
     </application>
 
 </manifest>

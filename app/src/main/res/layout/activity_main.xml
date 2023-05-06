@@ -33,7 +33,7 @@
                 android:paddingTop="20dp"
                 android:text="@string/Test_Greeting"
                 android:textColor="@color/black"
-                tools:ignore="RtlSymmetry" />
+                 />
 
 
         </LinearLayout>
@@ -62,16 +62,16 @@
                 android:src="@drawable/first" />
 
             <TextView
-                android:layout_width="213dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="serif"
                 android:onClick="taskClick"
-                android:paddingStart="13dp"
+                android:textAlignment="center"
                 android:paddingTop="50dp"
                 android:text="@string/click_on_the_icon"
                 android:textColor="@color/black"
                 android:textSize="16dp"
-                android:translationX="100dp" />
+                 />
         </FrameLayout>
 
         <FrameLayout
@@ -97,17 +97,17 @@
                 android:src="@drawable/chat" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:fontFamily="serif"
                 android:onClick="examClick"
-                android:paddingStart="13dp"
+                android:textAlignment="center"
                 android:paddingTop="50dp"
                 android:text="@string/click_on_the_icon2"
                 android:textColor="@color/black"
                 android:textSize="16dp"
-                android:translationX="60dp" />
+                 />
 
         </FrameLayout>
 
@@ -138,12 +138,12 @@
                 android:layout_height="match_parent"
                 android:fontFamily="serif"
                 android:onClick="gradesClick"
-                android:paddingStart="13dp"
+                android:textAlignment="center"
                 android:paddingTop="50dp"
                 android:text="@string/click_on_the_icon3"
                 android:textColor="@color/black"
                 android:textSize="16dp"
-                android:translationX="100dp" />
+                 />
         </FrameLayout>
 
         <TextView
@@ -186,7 +186,6 @@
         android:id="@+id/menuBar"
         android:layout_alignParentBottom="true"
         app:menu="@menu/nav_menu"
-
         />
 
 </RelativeLayout>
