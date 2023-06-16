@@ -1,5 +1,6 @@
 package xyz.mohammadf.assignmentfix.helpers;
 
+import android.content.SharedPreferences;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -18,6 +19,14 @@ public class MyViewer extends RecyclerView.ViewHolder {
         super(itemView);
         textView = itemView.findViewById(R.id.taskName);
         img = itemView.findViewById(R.id.imgInCard);
+
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
     }
 
 

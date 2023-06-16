@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -12,29 +12,28 @@
             android:layout_marginTop="50dp">
 
             <ImageView
+                android:id="@+id/imgInCard"
                 style="@style/Main"
                 android:layout_width="300dp"
-                android:id="@+id/imgInCard"
-                android:layout_height="118dp"
+                android:layout_height="wrap_content"
                 android:contentDescription="@string/firstimagediscription"
                 android:onClick="engClick"
                 android:src="@drawable/test" />
 
 
             <TextView
+                android:id="@+id/taskName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:fontFamily="serif"
                 android:onClick="examClick"
-                android:textAlignment="center"
                 android:paddingTop="50dp"
                 android:text="@string/english_essay"
-                android:id="@+id/taskName"
+                android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="16dp"
-                />
+                android:textSize="16dp" />
 
         </FrameLayout>
 
-</RelativeLayout>
+</LinearLayout>

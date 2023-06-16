@@ -27,6 +27,8 @@ public class TestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tasks);
 
         List<Task> tasks = new ArrayList<>();
+
+
         tasks.add(new Task("arabic", "test", new Date(), "test"));
         tasks.add(new Task("English", "test", new Date(), "test"));
         tasks.add(new Task("French", "test", new Date(), "test"));
