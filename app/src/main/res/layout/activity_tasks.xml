@@ -11,52 +11,19 @@
     android:layout_height="match_parent">
 
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical">
+        android:id="@+id/tasksVeiw"
+        />
 
-        <FrameLayout
-            style="@style/Main"
-            android:layout_width="300dp"
-            android:layout_height="118dp"
-            android:layout_marginTop="50dp">
-
-            <ImageView
-                style="@style/Main"
-                android:layout_width="300dp"
-                android:layout_height="118dp"
-                android:contentDescription="@string/firstimagediscription"
-                android:onClick="engClick"
-                android:src="@drawable/test" />
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:fontFamily="serif"
-                android:onClick="examClick"
-                android:textAlignment="center"
-                android:paddingTop="50dp"
-                android:text="@string/english_essay"
-                android:textColor="@color/black"
-                android:textSize="16dp"
-                 />
-
-        </FrameLayout>
-
-
-    </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menuBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/menuBar"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/nav_menu"
-
-        />
+        android:layout_marginBottom="0dp"
+        app:menu="@menu/nav_menu" />
 
 </RelativeLayout>
