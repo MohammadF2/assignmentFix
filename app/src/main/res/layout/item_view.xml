@@ -17,7 +17,6 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/firstimagediscription"
-                android:onClick="engClick"
                 android:src="@drawable/test" />
 
 
@@ -27,7 +26,6 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:fontFamily="serif"
-                android:onClick="examClick"
                 android:paddingTop="50dp"
                 android:text="@string/english_essay"
                 android:textAlignment="center"

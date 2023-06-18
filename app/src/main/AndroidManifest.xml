@@ -26,13 +26,13 @@
         </activity>
 
         <activity
-            android:name=".activitys.TestActivity"
+            android:name=".activitys.TaskActivity"
             android:label="Test Activity" />
         <activity
             android:name=".activitys.AccountActivity"
             android:label="Account Activity" />
         <activity
-            android:name=".activitys.EngTaskActivity"
+            android:name=".activitys.TaskWindowActivity"
             android:label="EngTask Activity" />
         <activity
             android:name=".activitys.UpcomingActivity"

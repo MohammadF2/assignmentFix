@@ -12,8 +12,7 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 
-import xyz.mohammadf.assignmentfix.activitys.AccountActivity;
-import xyz.mohammadf.assignmentfix.activitys.TestActivity;
+import xyz.mohammadf.assignmentfix.activitys.TaskActivity;
 import xyz.mohammadf.assignmentfix.activitys.UpcomingActivity;
 import xyz.mohammadf.assignmentfix.model.User;
 
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void taskClick(View view) {
-        Intent intent = new Intent(MainActivity.this, TestActivity.class);
+        Intent intent = new Intent(MainActivity.this, TaskActivity.class);
         startActivity(intent);
     }
 

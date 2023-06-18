@@ -1,7 +1,6 @@
 package xyz.mohammadf.assignmentfix;
 
 import android.content.Intent;
-import android.graphics.drawable.Animatable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
@@ -19,8 +18,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import xyz.mohammadf.assignmentfix.activitys.TestActivity;
-
 public class SplashActivity extends AppCompatActivity {
 
 
@@ -37,18 +34,7 @@ public class SplashActivity extends AppCompatActivity {
         RelativeLayout layout = findViewById(R.id.relativeAnim);
         layout.setAnimation(animation);
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        startShining(layout);
-                    }
-                });
-            }
-        }, 1510);
+        startShining(layout);
     }
 
 
@@ -65,15 +51,14 @@ public class SplashActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        animation.setDuration(4800);
+                        animation.setDuration(1000);
                         animation.setFillAfter(false);
                         animation.setInterpolator(new AccelerateDecelerateInterpolator());
                         shine.startAnimation(animation);
                     }
                 });
             }
-        },10, 3, TimeUnit.SECONDS);
-
+        },0, 1, TimeUnit.SECONDS);
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -81,7 +66,7 @@ public class SplashActivity extends AppCompatActivity {
                 Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(intent);
             }
-        }, 5000);
+        }, 10000);
     }
 
 }

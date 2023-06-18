@@ -1,8 +1,11 @@
 package xyz.mohammadf.assignmentfix.activitys;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -11,17 +14,20 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.gson.Gson;
+
 import java.util.Date;
 
 import xyz.mohammadf.assignmentfix.MainActivity;
 import xyz.mohammadf.assignmentfix.R;
 import xyz.mohammadf.assignmentfix.model.Task;
 
-public class EngTaskActivity extends AppCompatActivity {
+public class TaskWindowActivity extends AppCompatActivity {
 
 
     private Task task;
 
+    SharedPreferences sp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,15 +37,14 @@ public class EngTaskActivity extends AppCompatActivity {
         final EditText taskText = findViewById(R.id.taskText);
         final TextView desc = findViewById(R.id.taskDescription);
 
-        task = new Task("English essay",
-                "You need to write an essay about how to change cars",
-                new Date(2022, 2, 13),
-                "NotReal");
+        sp = this.getSharedPreferences("main", Context.MODE_PRIVATE);
+        Gson gson = new Gson();
+
+        task = gson.fromJson(sp.getString("task", "test, test, 05/05/2023, test"), Task.class);
 
         date.setText(task.getDueDate().toString());
         taskText.setHint(task.getTitle());
         desc.setText(task.getDescription());
-
 
 
     }
@@ -60,7 +65,23 @@ public class EngTaskActivity extends AppCompatActivity {
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         task.setAnswer(taskText.getText().toString());
-                        Intent intent = new Intent(EngTaskActivity.this, MainActivity.class);
+                        Gson gson = new Gson();
+
+                        Task[] tasks = gson.fromJson(sp.getString("tasks", "[{}]"), Task[].class);
+                        if (tasks != null) {
+
+                            for (int i = 0; i < tasks.length; i++) {
+                                if (task.getTitle().equals(tasks[i].getTitle())) {
+                                    Log.d("Test", "found");
+                                    tasks[i].setSolved(true);
+                                }
+                            }
+
+                            SharedPreferences.Editor editor = sp.edit();
+                            editor.putString("tasks", gson.toJson(tasks));
+                            editor.commit();
+                        }
+                        Intent intent = new Intent(TaskWindowActivity.this, MainActivity.class);
                         startActivity(intent);
                     }
                 });
@@ -82,7 +103,7 @@ public class EngTaskActivity extends AppCompatActivity {
 
     public void taskClick(MenuItem item) {
 
-        Intent intent = new Intent(EngTaskActivity.this, MainActivity.class);
+        Intent intent = new Intent(TaskWindowActivity.this, MainActivity.class);
         startActivity(intent);
 
     }

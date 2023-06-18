@@ -61,14 +61,17 @@
             />
 
 
-
         <Button
+            style="@style/Widget.Material3.Button.IconButton.Filled"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="50dp"
-            android:text="Submit"
             android:onClick="submit"
-            />
+            android:text="Submit"
+            android:textSize="15dp"
+            app:iconTintMode="src_in"
+            app:rippleColor="@color/white"
+            app:strokeColor="#FF0000" />
 
 
     </LinearLayout>
